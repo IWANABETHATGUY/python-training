@@ -29,7 +29,7 @@ ti=(''.join(tt))[:13]
 # print("Captcha solution attempt: "+captchaResponse)
 s=requests.Session()
 url='http://www.acfun.tv/login.aspx'
-payload={'username':'18692259817','password':'forhxj1996'}
+payload={'username':'*******','password':'******'}
 r=s.post(url,headers=head,data=payload)
 print(r.text)
 tt=s.post('http://www.acfun.tv/webapi/record/actions/signin?channel=0&date=%s'%(ti))

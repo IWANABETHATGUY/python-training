@@ -19,14 +19,7 @@ ttt=time.time()
 tt=str(ttt).split('.')
 ti=(''.join(tt))[:13]
 
-# request.urlretrieve(baseurl,'captcha.jpg')
-# cleanImage("capmain.tif")
-# p = subprocess.Popen(["tesseract", "cap0.png", "captcha"],stdout=
-#     subprocess.PIPE,stderr=subprocess.PIPE)
-# p.wait()
-# f = open("captcha.txt", "r")
-# captchaResponse = f.read().replace(" ", "").replace("\n", "")
-# print("Captcha solution attempt: "+captchaResponse)
+
 s=requests.Session()
 url='http://www.acfun.tv/login.aspx'
 payload={'username':'*******','password':'******'}
@@ -46,7 +39,4 @@ guide=html.find('div',{'class':'area-extra'})
 banana=guide.find('a',{'href':'#area=banana'})
 tt=banana.find('span')
 win32api.MessageBox(0, '你还剩：'+tt.text+" 个香蕉", 'Information', 0)
-for i in range (720):
-    htobj = s.get('http://www.acfun.tv/member/#area=splash')
-    print(htobj)
-    time.sleep(10)
+
